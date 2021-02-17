@@ -1,39 +1,10 @@
 /*REMEMBER TO RETURN ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
 
 /* 👀 This is your data ⬇ */
-const originalFlavors = [
-    "Banana Nut Fudge",
-    "Black Walnut",
-    "Burgundy Cherry",
-    "Butterscotch Ribbon",
-    "Cherry Macaron",
-    "Chocolate",
-    "Chocolate Almond",
-    "Chocolate Chip",
-    "Chocolate Fudge",
-    "Chocolate Mint",
-    "Chocolate Ribbon",
-    "Coffee",
-    "Coffee Candy",
-    "Date Nut",
-    "Eggnog",
-    "French Vanilla",
-    "Green Mint Stick",
-    "Lemon Crisp",
-    "Lemon Custard",
-    "Lemon Sherbet",
-    "Maple Nut",
-    "Orange Sherbet",
-    "Peach",
-    "Peppermint Fudge Ribbon",
-    "Peppermint Stick",
-    "Pineapple Sherbet",
-    "Raspberry Sherbet",
-    "Rocky Road",
-    "Strawberry",
-    "Vanilla",
-    "Vanilla Burnt Almond"
-]
+const originalFlavors = ["Banana Nut Fudge", "Black Walnut", "Burgundy Cherry", "Butterscotch Ribbon", "Cherry Macaron", "Chocolate",
+"Chocolate Almond", "Chocolate Chip", "Chocolate Fudge", "Chocolate Mint", "Chocolate Ribbon", "Coffee", "Coffee Candy", "Date Nut", "Eggnog",
+"French Vanilla", "Green Mint Stick", "Lemon Crisp", "Lemon Custard", "Lemon Sherbet", "Maple Nut", "Orange Sherbet", "Peach",
+"Peppermint Fudge Ribbon", "Peppermint Stick", "Pineapple Sherbet", "Raspberry Sherbet", "Rocky Road", "Strawberry", "Vanilla","Vanilla Burnt Almond"]
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1: Copy the Array! 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 We have an array called originalFlavors with 31 flavors (see above).  In these tasks, we will be reading and writing data to this array.  
@@ -45,10 +16,14 @@ Use the copy function below to do the following:
     2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/){
-    /*your code here*/
-}    
 
+function copy(array){
+ [...array];
+ return array
+}    
+copy(originalFlavors)
+
+// console.log("testing array", copy(originalFlavors)); 
 
 
 
@@ -64,9 +39,14 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
-   /*your code here*/
+function is31Flavors(array){
+if(array.length = 31){
+return true;
 }
+else{
+    return false
+}
+}is31Flavors(originalFlavors)
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -160,8 +140,16 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-    /*your code here*/
+function filterByWord(array, string){
+    let newArray=[];
+    for(let i=0; i < array.lenth; i++){
+        if(array[i].includes(string)){
+            newArray.push(array[i])
+            
+    }
+        
+        }
+     return newArray;
 }
 
 
